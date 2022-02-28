@@ -7,6 +7,7 @@ let configBase = {
     mode: 'production',
     module: {
       rules: [
+        { test: /\.tsx?$/, loader: "ts-loader" },
         {
           test: /\.js$/,
           exclude: path.join(__dirname, 'node_modules'),
@@ -34,7 +35,7 @@ let configBase = {
       alias: {
         "fs": "html5-fs"
       },
-      extensions: ['.js', '.jsx', '.css', '.json', 'otf', 'ttf', 'eot', 'svg'],
+      extensions: ['.ts','.js', '.jsx', '.css', '.json', 'otf', 'ttf', 'eot', 'svg'],
       modules: [
         'node_modules'
       ],
